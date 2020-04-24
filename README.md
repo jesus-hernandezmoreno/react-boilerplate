@@ -3,11 +3,11 @@
 # React Boilerplate
 
 A starter boilerplate to quickly create react apps, includes: react, redux, react-router, styled-component, framer-motion, auth and modals. 🧙
-https://jesus-hernandezmoreno.github.io/login
+http://jesus-hernandezmoreno.github.io/react-boilerplate
 
 ## Demo
 
-https://jesus-hernandezmoreno.github.io/login
+http://jesus-hernandezmoreno.github.io/react-boilerplate
 
 ## About
 
