@@ -1,21 +1,10 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-/* Redux */
-import { signOut } from 'redux/modules/auth';
-/* Components */
-import Button from 'Components/Button';
 /* Styled Components */
 import { Container, Link, Logo, Code, Paragraph } from './styled';
 
 import logo from 'assets/logo.svg';
 
-function Home({ history }) {
-  const dispatch = useDispatch();
-  const logOut = () => {
-    localStorage.clear();
-    dispatch(signOut());
-    history.push('/login');
-  };
+function Home() {
   return (
     <Container>
       <Logo src={logo} alt="logo" />
@@ -30,7 +19,6 @@ function Home({ history }) {
       >
         Learn React
       </Link>
-      <Button onClick={logOut}>Logout</Button>
     </Container>
   );
 }

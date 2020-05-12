@@ -5,7 +5,7 @@ import { device } from 'config/media';
 
 const Subtitle = styled(motion.h2)`
   /* Display & Box Model */
-  margin: ${props => props.theme.typography.defaultBoxModel.margin};
+  margin: ${props => props.margin || props.theme.typography.defaultBoxModel.margin};
   /* Text */
   font-size: ${props => props.theme.typography.subtitle.fontSizes.mobile};
   font-weight: bold;

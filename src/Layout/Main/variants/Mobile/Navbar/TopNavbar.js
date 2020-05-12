@@ -7,7 +7,7 @@ const logo = require('assets/logo.svg');
 const MobileTopNavbar = () => {
   return (
     <MobileTopContainer>
-      <StyledLink to="/my-collection">
+      <StyledLink to="/home">
         <Logo src={logo} />
       </StyledLink>
     </MobileTopContainer>

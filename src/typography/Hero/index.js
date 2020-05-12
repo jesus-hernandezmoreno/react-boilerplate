@@ -5,7 +5,7 @@ import { device } from 'config/media';
 
 const Hero = styled(motion.h1)`
   /* Display & Box Model */
-  margin: ${props => props.theme.typography.defaultBoxModel.margin};
+  margin: ${props => props.margin || props.theme.typography.defaultBoxModel.margin};
   /* Text */
   font-size: ${props => props.theme.typography.hero.fontSizes.mobile};
   font-weight: bold;

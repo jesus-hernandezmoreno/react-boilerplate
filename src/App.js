@@ -13,12 +13,10 @@ import Main from './Layout/Main';
 import Empty from './Layout/Empty';
 /* Views */
 import Login from './Views/Login';
-import Home from './Views/Home';
-import Blog from 'Views/Blog';
-import Docs from 'Views/Docs';
-import Community from 'Views/Community';
 /* Modal */
 import ModalRoot from 'Modals/ModalRoot';
+/* Routes */
+import routes from 'routes';
 
 const App = () => {
   const history = useHistory();
@@ -37,10 +35,9 @@ const App = () => {
     <div>
       <Switch location={location}>
         <AuthRoute exact path="/login" layout={Empty} component={Login} />
-        <PrivateRoute exact path="/home" layout={Main} component={Home} />
-        <PrivateRoute exact path="/docs" layout={Main} component={Docs} />
-        <PrivateRoute exact path="/blog" layout={Main} component={Blog} />
-        <PrivateRoute exact path="/community" layout={Main} component={Community} />
+        {routes.map(route => (
+          <PrivateRoute exact path={route.path} layout={Main} component={route.component} />
+        ))}
         <Redirect from="/" to="/home" />
       </Switch>
       <ToastContainer

@@ -5,7 +5,7 @@ import { device } from 'config/media';
 
 const Label = styled(motion.label)`
   /* Display & Box Model */
-  margin: ${props => props.theme.typography.defaultBoxModel.margin};
+  margin: ${props => props.margin || props.theme.typography.defaultBoxModel.margin};
   /* Text */
   font-size: ${props => props.theme.typography.label.fontSizes.mobile};
   font-weight: bold;
